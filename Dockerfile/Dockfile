@@ -1,6 +1,6 @@
 FROM python
 RUN git clone git clone https://github.com/anfederico/Flaskex
-RUN cd Flaskex
-pip install -r requirements.txt
+WORKDIR /Flaskex
+RUN cd /Flaskex && pip install -r requirements.txt
 EXPOSE 5000
-CMD ["python", "/Flaskex/ app.py"]
+CMD ["python", "app.py"]
